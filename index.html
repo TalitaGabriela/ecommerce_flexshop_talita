@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex Shop - Sua Loja Online</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <!-- Cabeçalho do site -->
+    <header>
+        <div class="container-cabecalho">
+            <img class="logo" src="/static/img/logo_roxa.png" alt="Flex Shop"/>
+            <!-- Menu de navegação -->
+            <nav>
+                <ul>
+                    <li><a href="/">Início</a></li>
+                    <li><a href="/templates/produtos.html">Produtos</a></li>
+                    <li><a href="/templates/cadastro_usuario.html">Cadastrar</a></li>
+                    <li><a href="/templates/login.html">Login</a></li>
+                    <li><a href="/templates/carrinho.html">Carrinho</a></li>
+                    <li><a href="/templates/adm.html">Administrativo</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Conteúdo principal -->
+    <main>
+        <!-- Banner principal -->
+        <section class="destaque">
+            <h2>BEM-VINDO À FLEX SHOP!</h2>
+            <p>Descubra as melhores ofertas em produtos de qualidade das nossas lojas parceiras!</p>
+            <a href="/templates/produtos.html" class="botao">Ver Todos os Produtos</a>
+        </section>
+
+        <!-- Seção de lojas parceiras -->
+        <section class="destaque">
+            <h2>NOSSAS LOJAS PARCEIRAS</h2>
+            <p>Explore nossas lojas exclusivas e esteja sempre ligado nas novidades!</p>
+            
+            <div class="grid-cards">
+                <div class="card">
+                    <img src="https://visnoinvest.com.br/img/companies/AMAR.webp" alt="Marisa Logo"/>
+                    <h3 class="titulo">Marisa</h3>
+                    <p class="descricao">Moda feminina com estilo e qualidade para todas as ocasiões.</p>
+                    <a href="/templates/produtos.html?loja=marisa" class="botao">Ver Produtos</a>
+                </div>
+
+                <div class="card">
+                    <img src="https://logoeps.com/wp-content/uploads/2013/03/renner-vector-logo.png" alt="Renner Logo"/>
+                    <h3 class="titulo">Renner</h3>
+                    <p class="descricao">Fashion e tendências para toda a família com os melhores preços.</p>
+                    <a href="/templates/produtos.html?loja=renner" class="botao">Ver Produtos</a>
+                </div>
+
+                <div class="card">
+                    <img src="https://logoeps.com/wp-content/uploads/2013/03/cea-vector-logo.png" alt="CEA Logo"/>
+                    <h3 class="titulo">C&A</h3>
+                    <p class="descricao">Moda democrática e acessível para todos os estilos e idades.</p>
+                    <a href="/templates/produtos.html?loja=cea" class="botao">Ver Produtos</a>
+                </div>
+
+                <div class="card">
+                    <img src="https://logoeps.com/wp-content/uploads/2013/03/riachuelo-vector-logo.png" alt="Riachuelo Logo"/>
+                    <h3 class="titulo">Riachuelo</h3>
+                    <p class="descricao">Fashion, casa e beleza em um só lugar com qualidade garantida.</p>
+                    <a href="/templates/produtos.html?loja=riachuelo" class="botao">Ver Produtos</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Produtos em destaque -->
+        <section class="produtos-destaque">
+            <h3>PRODUTOS EM DESTAQUE</h3>
+            <div class="grid-cards">
+                <div class="card">
+                    <a href="/templates/produto.html">
+                        <img src="https://images.unsplash.com/photo-1434389677669-e08b4cac3105?w=300" alt="Vestido Floral"/>
+                        <h3 class="titulo">Vestido Floral</h3>
+                        <p class="preco">R$ 89,90</p>
+                        <p class="descricao">Vestido leve e elegante, perfeito para o verão.</p>
+                        <button>Adicionar ao Carrinho</button>
+                    </a>
+                </div>
+
+                <div class="card"><a href="/templates/produto.html">
+                    <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=300" alt="Camisa Social"/>
+                    <h3 class="titulo">Camisa Social</h3>
+                    <p class="preco">R$ 79,90</p>
+                    <p class="descricao">Camisa social masculina, ideal para trabalho.</p>
+                    <button>Adicionar ao Carrinho</button>
+                    </a>
+                </div>
+
+                <div class="card"><a href="/templates/produto.html">
+                    <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=300" alt="Tênis Esportivo"/>
+                    <h3 class="titulo">Tênis Esportivo</h3>
+                    <p class="preco">R$ 199,90</p>
+                    <p class="descricao">Tênis confortável para atividades físicas.</p>
+                    <button>Adicionar ao Carrinho</button>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção de benefícios -->
+        <section class="destaque">
+            <h2>POR QUE ESCOLHER A FLEX SHOP?</h2>
+            <div class="grid-cards">
+                <div class="card">
+                    <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=150" alt="Entrega Rápida"/>
+                    <h3 class="titulo">Entrega Rápida</h3>
+                    <p class="descricao">Receba seus produtos em até 48h em todo o país.</p>
+                </div>
+
+                <div class="card">
+                    <img src="https://images.unsplash.com/photo-1556742502-ec7c0e9f34b1?w=150" alt="Qualidade Garantida"/>
+                    <h3 class="titulo">Qualidade Garantida</h3>
+                    <p class="descricao">Produtos selecionados das melhores marcas.</p>
+                </div>
+
+                <div class="card">
+                    <img src="https://images.unsplash.com/photo-1556740758-90de374c12ad?w=150" alt="Atendimento 24h"/>
+                    <h3 class="titulo">Atendimento 24h</h3>
+                    <p class="descricao">Suporte completo todos os dias da semana.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Rodapé -->
+    <footer class="rodape">
+        <div class="container-rodape">
+            <div class="coluna-rodape">
+                <h3>Flex Shop</h3>
+                <p>Sua loja online de confiança</p>
+            <div class="coluna-rodape">
+                <h4>Contato</h4>
+                <p>contato@flexshop.com</p>
+                <p>(67) 99999-9999</p>
+            </div>
+        </div>
+        <div class="direitos-autorais">
+            <p>&copy; 2025 Flex Shop - Todos os direitos reservados. | Desenvolvido com 💜</p>
+        </div>
+    </footer>
+</body>
+</html>

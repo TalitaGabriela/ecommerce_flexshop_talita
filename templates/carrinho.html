@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrinho - Flex Shop</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <!-- Cabeçalho do site -->
+    <header>
+        <div class="container-cabecalho">
+            <img class="logo" src="/static/img/logo_roxa.png" alt="Flex Shop"/>
+            <!-- Menu de navegação -->
+            <nav>
+                <ul>
+                    <li><a href="/">Início</a></li>
+                    <li><a href="/templates/produtos.html">Produtos</a></li>
+                    <li><a href="/templates/cadastro_usuario.html">Cadastrar</a></li>
+                    <li><a href="/templates/login.html">Login</a></li>
+                    <li><a href="/templates/carrinho.html">Carrinho</a></li>
+                    <li><a href="/templates/adm.html">Administrativo</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Conteúdo principal -->
+    <main>
+        <section class="destaque">
+            <h2>MEU CARRINHO DE COMPRAS</h2>
+            <p>Revise seus itens antes de finalizar a compra</p>
+        </section>
+
+        <!-- Itens do carrinho -->
+        <section id="itens-carrinho">
+            <!-- Os itens serão inseridos aqui via JavaScript -->
+        </section>
+
+        <!-- Estado vazio -->
+        <section id="carrinho-vazio" class="estado-vazio" style="display: none;">
+            <h3>Seu carrinho está vazio</h3>
+            <p>Que tal dar uma olhada nos nossos produtos?</p>
+            <a href="/templates/produtos.html" class="botao">Ver Produtos</a>
+        </section>
+
+        <!-- Resumo do carrinho -->
+        <section id="resumo-container" class="resumo-carrinho" style="display: none;">
+            <h3>Resumo do Pedido</h3>
+            <div class="linha-resumo">
+                <span>Subtotal:</span>
+                <span id="valor-subtotal">R$ 0,00</span>
+            </div>
+            <div class="linha-resumo">
+                <span>Frete:</span>
+                <span id="valor-frete">R$ 15,00</span>
+            </div>
+            <div class="linha-resumo">
+                <span>Desconto:</span>
+                <span id="valor-desconto">R$ 0,00</span>
+            </div>
+            <div class="linha-resumo total">
+                <span>Total:</span>
+                <span id="valor-total">R$ 0,00</span>
+            </div>
+            
+            <div style="margin-top: 30px;">
+                <input type="text" id="cupom-desconto" placeholder="Código do cupom" style="width: 70%; margin-right: 10px; padding: 12px; border: 2px solid #ddd; border-radius: 8px;">
+                <button class="botao-secundario">Aplicar</button>
+            </div>
+            
+            <div style="margin-top: 30px;">
+                <button> class="botao-perigo">Limpar Carrinho</button>
+                <a href="/templates/pagamento.html" class="botao" style="margin-left: 15px;">Finalizar Compra</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Rodapé -->
+    <footer class="rodape">
+        <div class="container-rodape">
+            <div class="coluna-rodape">
+                <h3>Flex Shop</h3>
+                <p>Sua loja online de confiança</p>
+            <div class="coluna-rodape">
+                <h4>Contato</h4>
+                <p>contato@flexshop.com</p>
+                <p>(67) 99999-9999</p>
+            </div>
+        </div>
+        <div class="direitos-autorais">
+            <p>&copy; 2025 Flex Shop - Todos os direitos reservados. | Desenvolvido com 💜</p>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produto - Flex Shop</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <!-- Cabeçalho -->
+    <header>
+        <div class="container-cabecalho">
+            <img class="logo" src="/static/img/logo_roxa.png" alt="Flex Shop"/>
+            <!-- Menu de navegação -->
+            <nav>
+                <ul>
+                    <li><a href="/">Início</a></li>
+                    <li><a href="/templates/produtos.html">Produtos</a></li>
+                    <li><a href="/templates/cadastro_usuario.html">Cadastrar</a></li>
+                    <li><a href="/templates/login.html">Login</a></li>
+                    <li><a href="/templates/carrinho.html">Carrinho</a></li>
+                    <li><a href="/templates/adm.html">Administrativo</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Conteúdo Principal -->
+    <main class="destaque">
+            <!-- Navegação de breadcrumb -->
+            <nav class="breadcrumb">
+                <a href="index.html">Início</a> > 
+                <a href="produtos.html">Produtos</a> > 
+                <span>Smartphone Premium</span>
+            </nav>
+
+            <div class="detalhes-produto">
+                <!-- Galeria de Imagens -->
+                <div class="galeria-produto">
+                    <div class="imagem-principal">
+                        <img id="imagem-destaque" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400' viewBox='0 0 400 400'%3E%3Crect width='400' height='400' fill='%23f0f0f0'/%3E%3Ctext x='200' y='200' text-anchor='middle' dy='.3em' font-family='Arial' font-size='16' fill='%23666'%3ESmartphone Premium%3C/text%3E%3C/svg%3E" alt="Smartphone Premium">
+                    </div>
+                    <div class="miniaturas">
+                        <img class="miniatura ativa" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Crect width='80' height='80' fill='%23f0f0f0'/%3E%3Ctext x='40' y='40' text-anchor='middle' dy='.3em' font-family='Arial' font-size='12' fill='%23666'%3E1%3C/text%3E%3C/svg%3E" alt="Imagem 1">
+                        <img class="miniatura" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Crect width='80' height='80' fill='%23e0e0e0'/%3E%3Ctext x='40' y='40' text-anchor='middle' dy='.3em' font-family='Arial' font-size='12' fill='%23666'%3E2%3C/text%3E%3C/svg%3E" alt="Imagem 2">
+                        <img class="miniatura" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Crect width='80' height='80' fill='%23d0d0d0'/%3E%3Ctext x='40' y='40' text-anchor='middle' dy='.3em' font-family='Arial' font-size='12' fill='%23666'%3E3%3C/text%3E%3C/svg%3E" alt="Imagem 3">
+                        <img class="miniatura" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Crect width='80' height='80' fill='%23c0c0c0'/%3E%3Ctext x='40' y='40' text-anchor='middle' dy='.3em' font-family='Arial' font-size='12' fill='%23666'%3E4%3C/text%3E%3C/svg%3E" alt="Imagem 4">
+                    </div>
+                </div>
+
+                <!-- Informações do Produto -->
+                <div class="info-produto">
+                    <h1 class="nome-produto">Smartphone Premium 128GB</h1>
+                    <div class="avaliacao">
+                        <div class="estrelas">
+                            <span class="estrela ativa">★</span>
+                            <span class="estrela ativa">★</span>
+                            <span class="estrela ativa">★</span>
+                            <span class="estrela ativa">★</span>
+                            <span class="estrela">★</span>
+                        </div>
+                        <span class="texto-avaliacao">(4,2/5 - 128 avaliações)</span>
+                    </div>
+
+                    <div class="preco-produto">
+                        <span class="preco-original">R$ 1.299,99</span>
+                        <span class="preco-atual">R$ 999,99</span>
+                        <span class="desconto">23% OFF</span>
+                    </div>
+
+                    <div class="opcoes-produto">
+                        <div class="grupo-opcao">
+                            <label>Cor:</label>
+                            <div class="opcoes-cor">
+                                <div class="cor-opcao ativa" style="background-color: #000;" onclick="selecionarCor(this)" data-cor="preto"></div>
+                                <div class="cor-opcao" style="background-color: #fff; border: 1px solid #ddd;" onclick="selecionarCor(this)" data-cor="branco"></div>
+                                <div class="cor-opcao" style="background-color: #0066cc;" onclick="selecionarCor(this)" data-cor="azul"></div>
+                                <div class="cor-opcao" style="background-color: #ff6b6b;" onclick="selecionarCor(this)" data-cor="vermelho"></div>
+                            </div>
+                        </div>
+
+                        <div class="grupo-opcao">
+                            <label for="quantidade">Quantidade:</label>
+                            <div class="controle-quantidade">
+                                <button type="button">-</button>
+                                <input type="number" id="quantidade" value="1" min="1" max="10">
+                                <button type="button">+</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="acoes-produto">
+                        <button class="botao-comprar">Comprar Agora</button>
+                        <p></p>
+                        <button class="botao-carrinho">Adicionar ao Carrinho</button>
+                        <p></p>
+                        <button class="botao-favorito">♡ Favoritar</button>
+                    </div>
+
+                    <div class="informacoes-entrega">
+                        <div class="info-item">
+                            <span class="icone">🚚</span>
+                            <div>
+                                <strong>Frete Grátis</strong>
+                                <p>Para compras acima de R$ 99</p>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <span class="icone">↩️</span>
+                            <div>
+                                <strong>Devolução Grátis</strong>
+                                <p>30 dias para trocar ou devolver</p>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <span class="icone">🔒</span>
+                            <div>
+                                <strong>Compra Segura</strong>
+                                <p>Dados protegidos</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+                    <div id="descricao" class="conteudo-aba ativo">
+                        <h3>Descrição do Produto</h3>
+                        <p>O Smartphone Premium 128GB oferece o que há de mais moderno em tecnologia móvel. Com design elegante e funcionalidades avançadas, este dispositivo é perfeito para quem busca performance e estilo.</p>
+
+                    <div id="avaliacoes" class="conteudo-aba">
+                        <h3>Avaliações dos Clientes</h3>
+                        <div class="resumo-avaliacoes">
+                            <div class="nota-geral">
+                                <span class="numero-nota">4.2</span>
+                                <div class="estrelas-nota">
+                                    <span class="estrela ativa">★</span>
+                                    <span class="estrela ativa">★</span>
+                                    <span class="estrela ativa">★</span>
+                                    <span class="estrela ativa">★</span>
+                                    <span class="estrela">★</span>
+                                </div>
+                                <span class="total-avaliacoes">128 avaliações</span>
+                            </div>
+                        </div>
+
+                        <div class="lista-avaliacoes">
+                            <div class="avaliacao-item">
+                                <div class="cabecalho-avaliacao">
+                                    <strong>João Silva</strong>
+                                    <div class="estrelas-mini">★★★★★</div>
+                                    <span class="data-avaliacao">15/05/2024</span>
+                                </div>
+                                <p>"Excelente produto! A qualidade da câmera é impressionante e a bateria dura o dia todo. Recomendo!"</p>
+                            </div>
+
+                            <div class="avaliacao-item">
+                                <div class="cabecalho-avaliacao">
+                                    <strong>Maria Santos</strong>
+                                    <div class="estrelas-mini">★★★★☆</div>
+                                    <span class="data-avaliacao">12/05/2024</span>
+                                </div>
+                                <p>"Bom custo-benefício. O design é bonito, mas poderia ter mais opções de cores."</p>
+                            </div>
+
+                            <div class="avaliacao-item">
+                                <div class="cabecalho-avaliacao">
+                                    <strong>Pedro Costa</strong>
+                                    <div class="estrelas-mini">★★★★★</div>
+                                    <span class="data-avaliacao">08/05/2024</span>
+                                </div>
+                                <p>"Superou minhas expectativas! Performance excelente para jogos e aplicativos pesados."</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    </main>
+
+    <!-- Rodapé -->
+    <footer class="rodape">
+        <div class="container-rodape">
+            <div class="coluna-rodape">
+                <h3>Flex Shop</h3>
+                <p>Sua loja online de confiança</p>
+            <div class="coluna-rodape">
+                <h4>Contato</h4>
+                <p>contato@flexshop.com</p>
+                <p>(67) 99999-9999</p>
+            </div>
+        </div>
+        <div class="direitos-autorais">
+            <p>&copy; 2025 Flex Shop - Todos os direitos reservados. | Desenvolvido com 💜</p>
+        </div>
+    </footer>
+</body>
+</html>

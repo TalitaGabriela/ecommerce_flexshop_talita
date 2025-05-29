@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel Administrativo - Flex Shop</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <!-- Cabeçalho -->
+    <header>
+        <div class="container-cabecalho">
+            <img class="logo" src="/static/img/logo_roxa.png" alt="Flex Shop"/>
+            <!-- Menu de navegação -->
+            <nav>
+                <ul>
+                    <li><a href="/">Início</a></li>
+                    <li><a href="/templates/produtos.html">Produtos</a></li>
+                    <li><a href="/templates/cadastro_usuario.html">Cadastrar</a></li>
+                    <li><a href="/templates/login.html">Login</a></li>
+                    <li><a href="/templates/carrinho.html">Carrinho</a></li>
+                    <li><a href="/templates/adm.html">Administrativo</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Conteúdo administrativo -->
+ <section class="destaque">
+    <div id="modal-loja" class="modal">
+        <div class="modal-conteudo">
+            <div class="modal-cabecalho">
+                <h3>Cadastrar Nova Loja</h3>
+                <span class="fechar">&times;</span>
+            </div>
+            <form id="form-nova-loja">
+                <div class="linha-campos">
+                    <div class="grupo-campo">
+                        <label for="nome-loja">Nome da Loja:</label>
+                        <input type="text" id="nome-loja" required>
+                    </div>
+                    <div class="grupo-campo">
+                        <label for="cnpj-loja">CNPJ:</label>
+                        <input type="text" id="cnpj-loja" placeholder="00.000.000/0001-00" required>
+                    </div>
+                </div>
+                
+                <div class="linha-campos">
+                    <div class="grupo-campo">
+                        <label for="responsavel-loja">Responsável:</label>
+                        <input type="text" id="responsavel-loja" required>
+                    </div>
+                    <div class="grupo-campo">
+                        <label for="email-loja">E-mail:</label>
+                        <input type="email" id="email-loja" required>
+                    </div>
+                </div>
+                
+                <div class="linha-campos">
+                    <div class="grupo-campo">
+                        <label for="telefone-loja">Telefone:</label>
+                        <input type="tel" id="telefone-loja" placeholder="(11) 99999-9999" required>
+                    </div>
+                    <div class="grupo-campo">
+                        <label for="categoria-loja">Categoria:</label>
+                        <select id="categoria-loja" required>
+                            <option value="">Selecione</option>
+                            <option value="eletronicos">Eletrônicos</option>
+                            <option value="roupas">Roupas e Acessórios</option>
+                            <option value="casa">Casa e Decoração</option>
+                            <option value="esportes">Esportes</option>
+                            <option value="beleza">Beleza e Cuidados</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="grupo-campo">
+                    <label for="descricao-loja">Descrição da Loja:</label>
+                    <textarea id="descricao-loja" rows="3"></textarea>
+                </div>
+                
+                <div class="botoes-modal">
+                    <button type="button" class="botao-cancelar">Cancelar</button>
+                    <button type="submit" class="botao-salvar">Cadastrar Loja</button>
+                </div>
+            </form>
+        </div>
+    </div>
+ </section>
+
+ <section class="destaque">
+    <!-- Modal para Novo Produto -->
+    <div id="modal-produto" class="modal">
+        <div class="modal-conteudo">
+            <div class="modal-cabecalho">
+                <h3>Cadastrar Novo Produto</h3>
+                <span class="fechar">&times;</span>
+            </div>
+            <form id="form-novo-produto">
+                <div class="linha-campos">
+                    <div class="grupo-campo">
+                        <label for="nome-produto">Nome do Produto:</label>
+                        <input type="text" id="nome-produto" required>
+                    </div>
+                    <div class="grupo-campo">
+                        <label for="loja-produto">Loja:</label>
+                        <select id="loja-produto" required>
+                            <option value="">Selecione</option>
+                            <option value="techstore">TechStore Brasil</option>
+                            <option value="fashion">Fashion World</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="linha-campos">
+                    <div class="grupo-campo">
+                        <label for="categoria-produto">Categoria:</label>
+                        <select id="categoria-produto" required>
+                            <option value="">Selecione</option>
+                            <option value="eletronicos">Eletrônicos</option>
+                            <option value="roupas">Roupas</option>
+                            <option value="casa">Casa & Decoração</option>
+                            <option value="esportes">Esportes</option>
+                        </select>
+                    </div>
+                    <div class="grupo-campo">
+                        <label for="preco-produto">Preço:</label>
+                        <input type="number" id="preco-produto" step="0.01" min="0" required>
+                    </div>
+                </div>
+                
+                <div class="linha-campos">
+                    <div class="grupo-campo">
+                        <label for="estoque-produto">Quantidade em Estoque:</label>
+                        <input type="number" id="estoque-produto" min="0" required>
+                    </div>
+                    <div class="grupo-campo">
+                        <label for="peso-produto">Peso (kg):</label>
+                        <input type="number" id="peso-produto" step="0.001" min="0">
+                    </div>
+                </div>
+                
+                <div class="grupo-campo">
+                    <label for="descricao-produto">Descrição:</label>
+                    <textarea id="descricao-produto" rows="4" required></textarea>
+                </div>
+                
+                <div class="grupo-campo">
+                    <label for="imagens-produto">Imagens do Produto:</label>
+                    <input type="file" id="imagens-produto" multiple accept="image/*">
+                    <small>Selecione até 5 imagens</small>
+                </div>
+                
+                <div class="botoes-modal">
+                    <button type="button" class="botao-cancelar">Cancelar</button>
+                    <button type="submit" class="botao-salvar">Cadastrar Produto</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    </section>
+</section>
+
+    <!-- Rodapé -->
+    <footer class="rodape">
+        <div class="container-rodape">
+            <div class="coluna-rodape">
+                <h3>Flex Shop</h3>
+                <p>Sua loja online de confiança</p>
+            <div class="coluna-rodape">
+                <h4>Contato</h4>
+                <p>contato@flexshop.com</p>
+                <p>(67) 99999-9999</p>
+            </div>
+        </div>
+        <div class="direitos-autorais">
+            <p>&copy; 2025 Flex Shop - Todos os direitos reservados. | Desenvolvido com 💜</p>
+        </div>
+    </footer>
+</body>
+</html>

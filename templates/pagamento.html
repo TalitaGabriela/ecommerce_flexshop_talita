@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagamento - Flex Shop</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Cabeçalho do site -->
+    <header>
+        <div class="container-cabecalho">
+            <img class="logo" src="/static/img/logo_roxa.png" alt="Flex Shop"/>
+            <!-- Menu de navegação -->
+            <nav>
+                <ul>
+                    <li><a href="/">Início</a></li>
+                    <li><a href="/templates/produtos.html">Produtos</a></li>
+                    <li><a href="/templates/cadastro_usuario.html">Cadastrar</a></li>
+                    <li><a href="/templates/login.html">Login</a></li>
+                    <li><a href="/templates/carrinho.html">Carrinho</a></li>
+                    <li><a href="/templates/adm.html">Administrativo</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Conteúdo Principal -->
+    <main class="conteudo-principal">
+        <div class="container-pagamento">
+            <h1>Finalizar Compra</h1>
+
+            <!-- Indicador de Etapas -->
+            <div class="indicador-etapas">
+                <div class="etapa concluida">
+                    <span class="numero">1</span>
+                    <span class="texto">Carrinho</span>
+                </div>
+                <div class="etapa ativa">
+                    <span class="numero">2</span>
+                    <span class="texto">Pagamento</span>
+                </div>
+                <div class="etapa">
+                    <span class="numero">3</span>
+                    <span class="texto">Confirmação</span>
+                </div>
+            </div>
+
+            <div class="layout-pagamento">
+                <!-- Formulário de Pagamento -->
+                <div class="secao-pagamento">
+                    <!-- Endereço de Entrega -->
+                    <div class="card-pagamento">
+                        <h2>Endereço de Entrega</h2>
+                        <form class="formulario-endereco">
+                            <div class="linha-formulario">
+                                <div class="campo-formulario">
+                                    <label for="cep">CEP *</label>
+                                    <input type="text" id="cep" name="cep" placeholder="00000-000" maxlength="9" required>
+                                </div>
+                                <div class="campo-formulario">
+                                    <label for="estado">Estado *</label>
+                                    <select id="estado" name="estado" required>
+                                        <option value="">Selecione</option>
+                                        <option value="SP">São Paulo</option>
+                                        <option value="RJ">Rio de Janeiro</option>
+                                        <option value="MG">Minas Gerais</option>
+                                        <option value="RS">Rio Grande do Sul</option>
+                                        <option value="PR">Paraná</option>
+                                        <option value="SC">Santa Catarina</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="linha-formulario">
+                                <div class="campo-formulario flex-2">
+                                    <label for="cidade">Cidade *</label>
+                                    <input type="text" id="cidade" name="cidade" placeholder="Sua cidade" required>
+                                </div>
+                                <div class="campo-formulario">
+                                    <label for="bairro">Bairro *</label>
+                                    <input type="text" id="bairro" name="bairro" placeholder="Seu bairro" required>
+                                </div>
+                            </div>
+
+                            <div class="linha-formulario">
+                                <div class="campo-formulario flex-2">
+                                    <label for="rua">Rua/Avenida *</label>
+                                    <input type="text" id="rua" name="rua" placeholder="Nome da rua" required>
+                                </div>
+                                <div class="campo-formulario">
+                                    <label for="numero">Número *</label>
+                                    <input type="text" id="numero" name="numero" placeholder="123" required>
+                                </div>
+                            </div>
+
+                            <div class="campo-formulario">
+                                <label for="complemento">Complemento</label>
+                                <input type="text" id="complemento" name="complemento" placeholder="Apartamento, bloco, etc.">
+                            </div>
+
+                            <div class="campo-formulario">
+                                <label for="referencia">Ponto de Referência</label>
+                                <input type="text" id="referencia" name="referencia" placeholder="Próximo ao mercado, etc.">
+                            </div>
+                        </form>
+                    </div>
+
+                    <!-- Método de Pagamento -->
+                    <div class="card-pagamento">
+                        <h2>Método de Pagamento</h2>
+                        
+                        <div class="opcoes-pagamento">
+                            <div class="opcao-pagamento">
+                                <input type="radio" id="cartao" name="pagamento" value="cartao" checked>
+                                <label for="cartao">
+                                    <span class="icone-pagamento">💳</span>
+                                    <div>
+                                        <strong>Cartão de Crédito/Débito</strong>
+                                        <p>Visa, Mastercard, Elo</p>
+                                    </div>
+                                </label>
+                            </div>
+
+                            <div class="opcao-pagamento">
+                                <input type="radio" id="pix" name="pagamento" value="pix">
+                                <label for="pix">
+                                    <span class="icone-pagamento">📱</span>
+                                    <div>
+                                        <strong>PIX</strong>
+                                        <p>Pagamento instantâneo</p>
+                                    </div>
+                                </label>
+                            </div>
+
+                            <div class="opcao-pagamento">
+                                <input type="radio" id="boleto" name="pagamento" value="boleto">
+                                <label for="boleto">
+                                    <span class="icone-pagamento">🧾</span>
+                                    <div>
+                                        <strong>Boleto Bancário</strong>
+                                        <p>Vencimento em 3 dias úteis</p>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Formulário do Cartão -->
+                        <div id="form-cartao" class="form-pagamento">
+                            <div class="linha-formulario">
+                                <div class="campo-formulario flex-2">
+                                    <label for="numero-cartao">Número do Cartão *</label>
+                                    <input type="text" id="numero-cartao" name="numero-cartao" placeholder="0000 0000 0000 0000" maxlength="19" required>
+                                </div>
+                                <div class="campo-formulario">
+                                    <label for="cvv">CVV *</label>
+                                    <input type="text" id="cvv" name="cvv" placeholder="123" maxlength="4" required>
+                                </div>
+                            </div>
+
+                            <div class="linha-formulario">
+                                <div class="campo-formulario">
+                                    <label for="nome-cartao">Nome no Cartão *</label>
+                                    <input type="text" id="nome-cartao" name="nome-cartao" placeholder="Como está no cartão" required>
+                                </div>
+                                <div class="campo-formulario">
+                                    <label for="validade">Validade *</label>
+                                    <input type="text" id="validade" name="validade" placeholder="MM/AA" maxlength="5" required>
+                                </div>
+                            </div>
+
+                            <div class="campo-formulario">
+                                <label for="parcelas">Parcelamento</label>
+                                <select id="parcelas" name="parcelas">
+                                    <option value="1">1x de R$ 299,90 (à vista)</option>
+                                    <option value="2">2x de R$ 149,95</option>
+                                    <option value="3">3x de R$ 99,97</option>
+                                    <option value="4">4x de R$ 74,98</option>
+                                    <option value="5">5x de R$ 59,98</option>
+                                    <option value="6">6x de R$ 49,98</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Resumo do Pedido -->
+                <div class="resumo-pedido">
+                    <div class="card-resumo">
+                        <h3>Resumo do Pedido</h3>
+                        
+                        <div class="item-resumo">
+                            <img src="https://via.placeholder.com/60x60/667eea/ffffff?text=P1" alt="Produto">
+                            <div class="info-item">
+                                <h4>Tênis Esportivo</h4>
+                                <p>Tamanho: 42</p>
+                                <p>Quantidade: 1</p>
+                            </div>
+                            <div class="preco-item">R$ 199,90</div>
+                        </div>
+
+                        <div class="item-resumo">
+                            <img src="https://via.placeholder.com/60x60/667eea/ffffff?text=P2" alt="Produto">
+                            <div class="info-item">
+                                <h4>Camiseta Casual</h4>
+                                <p>Tamanho: M</p>
+                                <p>Quantidade: 1</p>
+                            </div>
+                            <div class="preco-item">R$ 79,90</div>
+                        </div>
+
+                        <div class="cupom-desconto">
+                            <input type="text" placeholder="Código do cupom">
+                            <button type="button" class="btn-cupom">Aplicar</button>
+                        </div>
+
+                        <div class="totais">
+                            <div class="linha-total">
+                                <span>Subtotal:</span>
+                                <span>R$ 279,80</span>
+                            </div>
+                            <div class="linha-total">
+                                <span>Frete:</span>
+                                <span>R$ 20,10</span>
+                            </div>
+                            <div class="linha-total desconto">
+                                <span>Desconto:</span>
+                                <span>-R$ 0,00</span>
+                            </div>
+                            <div class="linha-total total">
+                                <span><strong>Total:</strong></span>
+                                <span><strong>R$ 299,90</strong></span>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="btn-finalizar">
+                            Finalizar Compra
+                        </button>
+                    </div>
+
+                    <!-- Segurança -->
+                    <div class="card-seguranca">
+                        <h4>🔒 Compra 100% Segura</h4>
+                        <div class="selos-seguranca">
+                            <div class="selo">SSL</div>
+                            <div class="selo">256-bit</div>
+                            <div class="selo">PCI DSS</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Rodapé -->
+    <footer class="rodape">
+        <div class="container-rodape">
+            <div class="coluna-rodape">
+                <h3>Flex Shop</h3>
+                <p>Sua loja online de confiança</p>
+            <div class="coluna-rodape">
+                <h4>Contato</h4>
+                <p>contato@flexshop.com</p>
+                <p>(67) 99999-9999</p>
+            </div>
+        </div>
+        <div class="direitos-autorais">
+            <p>&copy; 2025 Flex Shop - Todos os direitos reservados. | Desenvolvido com 💜</p>
+        </div>
+    </footer>
+</body>
+</html>

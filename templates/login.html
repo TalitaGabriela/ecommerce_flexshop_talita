@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Flex Shop</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <!-- Cabeçalho do site -->
+    <header>
+        <div class="container-cabecalho">
+            <img class="logo" src="/static/img/logo_roxa.png" alt="Flex Shop"/>
+            <!-- Menu de navegação -->
+            <nav>
+                <ul>
+                    <li><a href="/">Início</a></li>
+                    <li><a href="/templates/produtos.html">Produtos</a></li>
+                    <li><a href="/templates/cadastro_usuario.html">Cadastrar</a></li>
+                    <li><a href="/templates/login.html">Login</a></li>
+                    <li><a href="/templates/carrinho.html">Carrinho</a></li>
+                    <li><a href="/templates/adm.html">Administrativo</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Conteúdo Principal -->
+            <div class="destaque">
+                <h2>Fazer Login</h2>
+                <form id="form-login">
+                    <div class="grupo-campo">
+                        <label for="email">E-mail:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    
+                    <div class="grupo-campo">
+                        <label for="senha">Senha:</label>
+                        <input type="password" id="senha" name="senha" required>
+                        <span class="mostrar-senha">👁</span>
+                    </div>
+                    
+                    <div class="opcoes-login">
+                        <label class="lembrar">
+                            <input type="checkbox" id="lembrar">
+                            <span>Lembrar de mim</span>
+                        </label>
+                        <a href="#" class="esqueci-senha">Esqueci minha senha</a>
+                    </div>
+                    
+                    <button type="submit" class="botao-principal">Entrar</button>
+                </form>
+                
+                <div class="divisor">
+                    <span>ou</span>
+                </div>
+                
+                <div class="login-social">
+                    <button class="botao-google">
+                        <span><img src="https://img.icons8.com/?size=48&id=17949&format=png" alt="Acesso com Google"></span>
+                        Entrar com Google
+                    </button>
+                    <button class="botao-facebook">
+                        <span><img src="https://img.icons8.com/?size=48&id=118497&format=png" alt="Acesso com Facebook"></span>
+                        Entrar com Facebook
+                    </button>
+                </div>
+                
+                <div class="link-cadastro">
+                    <p>Não tem uma conta? <a href="cadastro_usuario.html">Cadastre-se aqui</a></p>
+                </div>
+            </div>
+        </div>
+   
+
+    <!-- Rodapé -->
+    <footer class="rodape">
+        <div class="container-rodape">
+            <div class="coluna-rodape">
+                <h3>Flex Shop</h3>
+                <p>Sua loja online de confiança</p>
+            <div class="coluna-rodape">
+                <h4>Contato</h4>
+                <p>contato@flexshop.com</p>
+                <p>(67) 99999-9999</p>
+            </div>
+        </div>
+        <div class="direitos-autorais">
+            <p>&copy; 2025 Flex Shop - Todos os direitos reservados. | Desenvolvido com 💜</p>
+        </div>
+    </footer>
+</body>
+</html>
