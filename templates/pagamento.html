@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pagamento - Flex Shop</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/static/style.css">
 </head>
 <body>
     <!-- Cabeçalho do site -->
@@ -26,32 +26,76 @@
     </header>
 
     <!-- Conteúdo Principal -->
+     
     <main class="conteudo-principal">
-        <div class="container-pagamento">
-            <h1>Finalizar Compra</h1>
-
-            <!-- Indicador de Etapas -->
-            <div class="indicador-etapas">
-                <div class="etapa concluida">
-                    <span class="numero">1</span>
-                    <span class="texto">Carrinho</span>
+        <div class="destaque">
+            <h2>Finalizar Compra</h2>
                 </div>
-                <div class="etapa ativa">
-                    <span class="numero">2</span>
-                    <span class="texto">Pagamento</span>
-                </div>
-                <div class="etapa">
-                    <span class="numero">3</span>
-                    <span class="texto">Confirmação</span>
-                </div>
-            </div>
-
+                
             <div class="layout-pagamento">
                 <!-- Formulário de Pagamento -->
                 <div class="secao-pagamento">
+
+                    <!-- Resumo do Pedido -->
+                 <div class="destaque">
+                <div class="resumo-pedido">
+                    <div class="card-resumo">
+                        <h3>Resumo do Pedido</h3>
+                        
+                        <div class="item-resumo">
+                            <img src="https://images.unsplash.com/photo-1434389677669-e08b4cac3105?w=300" alt="Produto">
+                            <div class="info-item">
+                                <h4>Tênis Esportivo</h4>
+                                <p>Tamanho: 42</p>
+                                <p>Quantidade: 1</p>
+                            </div>
+                            <div class="preco-item">R$ 199,90</div>
+                        </div>
+
+                        <div class="cupom-desconto">
+                            <input type="text" placeholder="Código do cupom">
+                            <button type="button" class="btn-cupom">Aplicar</button>
+                        </div>
+
+                        <div class="totais">
+                            <div class="linha-total">
+                                <span>Subtotal:</span>
+                                <span>R$ 279,80</span>
+                            </div>
+                            <div class="linha-total">
+                                <span>Frete:</span>
+                                <span>R$ 20,10</span>
+                            </div>
+                            <div class="linha-total">
+                                <span>Desconto:</span>
+                                <span>-R$ 0,00</span>
+                            </div>
+                            <div class="linha-total total">
+                                <span><strong>Total:</strong></span>
+                                <span><strong>R$ 299,90</strong></span>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="btn-finalizar">
+                            Finalizar Compra
+                        </button>
+                    </div>
+
+                    <!-- Segurança -->
+                    <div class="card-seguranca">
+                        <h4>🔒 Compra 100% Segura</h4>
+                        <div class="selos-seguranca">
+                            <div class="selo">SSL</div>
+                            <div class="selo">256-bit</div>
+                            <div class="selo">PCI DSS</div>
+                        </div>
+                    </div>
+                </div>
+                 </div>
                     <!-- Endereço de Entrega -->
+                     <div class="destaque">
                     <div class="card-pagamento">
-                        <h2>Endereço de Entrega</h2>
+                        <h1>Endereço de Entrega</h2>
                         <form class="formulario-endereco">
                             <div class="linha-formulario">
                                 <div class="campo-formulario">
@@ -105,10 +149,12 @@
                             </div>
                         </form>
                     </div>
+                    </div>
 
                     <!-- Método de Pagamento -->
+                     <div class="destaque">
                     <div class="card-pagamento">
-                        <h2>Método de Pagamento</h2>
+                        <h1>Método de Pagamento</h2>
                         
                         <div class="opcoes-pagamento">
                             <div class="opcao-pagamento">
@@ -183,74 +229,11 @@
                         </div>
                     </div>
                 </div>
-
-                <!-- Resumo do Pedido -->
-                <div class="resumo-pedido">
-                    <div class="card-resumo">
-                        <h3>Resumo do Pedido</h3>
-                        
-                        <div class="item-resumo">
-                            <img src="https://via.placeholder.com/60x60/667eea/ffffff?text=P1" alt="Produto">
-                            <div class="info-item">
-                                <h4>Tênis Esportivo</h4>
-                                <p>Tamanho: 42</p>
-                                <p>Quantidade: 1</p>
-                            </div>
-                            <div class="preco-item">R$ 199,90</div>
-                        </div>
-
-                        <div class="item-resumo">
-                            <img src="https://via.placeholder.com/60x60/667eea/ffffff?text=P2" alt="Produto">
-                            <div class="info-item">
-                                <h4>Camiseta Casual</h4>
-                                <p>Tamanho: M</p>
-                                <p>Quantidade: 1</p>
-                            </div>
-                            <div class="preco-item">R$ 79,90</div>
-                        </div>
-
-                        <div class="cupom-desconto">
-                            <input type="text" placeholder="Código do cupom">
-                            <button type="button" class="btn-cupom">Aplicar</button>
-                        </div>
-
-                        <div class="totais">
-                            <div class="linha-total">
-                                <span>Subtotal:</span>
-                                <span>R$ 279,80</span>
-                            </div>
-                            <div class="linha-total">
-                                <span>Frete:</span>
-                                <span>R$ 20,10</span>
-                            </div>
-                            <div class="linha-total desconto">
-                                <span>Desconto:</span>
-                                <span>-R$ 0,00</span>
-                            </div>
-                            <div class="linha-total total">
-                                <span><strong>Total:</strong></span>
-                                <span><strong>R$ 299,90</strong></span>
-                            </div>
-                        </div>
-
-                        <button type="submit" class="btn-finalizar">
-                            Finalizar Compra
-                        </button>
-                    </div>
-
-                    <!-- Segurança -->
-                    <div class="card-seguranca">
-                        <h4>🔒 Compra 100% Segura</h4>
-                        <div class="selos-seguranca">
-                            <div class="selo">SSL</div>
-                            <div class="selo">256-bit</div>
-                            <div class="selo">PCI DSS</div>
-                        </div>
-                    </div>
-                </div>
+                
             </div>
-        </div>
+            </div>
     </main>
+    </div>
 
     <!-- Rodapé -->
     <footer class="rodape">
