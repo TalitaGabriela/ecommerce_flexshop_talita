@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Carrinho - Flex Shop</title>
     <link rel="stylesheet" href="/static/style.css">
+    <link rel="icon" type="image/jpg" href="/static/img/icon_flexshop.png">
 </head>
 <body>
     <!-- Cabeçalho do site -->
@@ -33,8 +34,25 @@
         </section>
 
         <!-- Itens do carrinho -->
-        <section id="itens-carrinho">
+        <section id="itens-carrinho" class="grid-cards">
             <!-- Os itens serão inseridos aqui via JavaScript -->
+             <div class="card"><a href="/templates/produto.html">
+                    <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=300" alt="Camisa Social"/>
+                    <h3 class="titulo">Camisa Social</h3>
+                    <p class="preco">R$ 79,90</p>
+                    <p class="descricao">Camisa social masculina, ideal para trabalho.</p>
+                    <a href="/templates/pagamento.html"><button>Comprar</button></a>
+                    </a>
+                </div>
+
+                <div class="card"><a href="/templates/produto.html">
+                    <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=300" alt="Tênis Esportivo"/>
+                    <h3 class="titulo">Tênis Esportivo</h3>
+                    <p class="preco">R$ 199,90</p>
+                    <p class="descricao">Tênis confortável para atividades físicas.</p>
+                    <a href="/templates/pagamento.html"><button>Comprar</button></a>
+                    </a>
+                </div>
         </section>
 
         <!-- Estado vazio -->
