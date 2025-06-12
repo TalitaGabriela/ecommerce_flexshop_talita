@@ -842,6 +842,12 @@ footer {
     border-radius: 8px;
 }
 
+/*Página Pagamento*/
+.img-pag{
+    max-width: 400px;
+    height: auto;
+}
+
 /* Responsividade */
 @media (max-width: 768px) {
     .container-cabecalho {
